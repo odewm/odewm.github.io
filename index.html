@@ -8,27 +8,37 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Source+Serif+4:opsz@8..60&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-brand">ODEWM 2026</a>
-      <ul class="nav-menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-menu" id="navMenu">
         <li><a href="#topic">Topic</a></li>
         <li><a href="#speakers">Speakers</a></li>
         <li><a href="#schedule">Schedule</a></li>
         <li><a href="#organizers">Organizers</a></li>
         <li><a href="#cfp">Call for Papers</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
       </ul>
     </div>
   </nav>
 
   <header id="home" class="hero">
+    <img src="static/ERI_vertical_RGB.svg" alt="Ericsson Research" class="sponsor-logo-top">
     <div class="container">
       <p class="eyebrow">ECCV 2026 Workshop</p>
       <h1>On-device Embodied World Models</h1>
       <p class="subtitle">Grounded, efficient, and privacy‑aware world understanding for mobile devices and embodied agents</p>
-      <p class="date-location">📍 ECCV 2026, Milan, Italy &nbsp;|&nbsp; 🗓️ Half‑day workshop</p>
+      <p class="date-location">
+        <span class="location-part">📍 ECCV 2026, Malmö, Sweden</span>
+        <span class="separator">&nbsp;|&nbsp;</span>
+        <span class="workshop-part">🗓️ Half‑day workshop</span>
+      </p>
     </div>
   </header>
 
@@ -49,141 +59,265 @@
         <p class="keywords"><strong>Keywords:</strong> mobile devices, embodied agents, multimodal, world models</p>
       </div>
     </section>
-
+    
     <!-- Invited Speakers -->
     <section id="speakers" class="section alt-bg">
       <div class="container">
         <h2>Invited Speakers</h2>
         <div class="speakers-grid">
           <div class="speaker-card">
-            <div class="speaker-photo placeholder"></div>
-            <h3>Katerina Fragkiadaki</h3>
-            <p class="affiliation">Carnegie Mellon University</p>
-            <p>Associate Professor, Machine Learning Department. Research on interactive world models, spatial understanding, and embodied AI.</p>
-          </div>
-          <div class="speaker-card">
-            <div class="speaker-photo placeholder"></div>
-            <h3>Jack Parker‑Holder</h3>
-            <p class="affiliation">Google DeepMind & UCL</p>
-            <p>Research Scientist, lead contributor to Genie. Focus on training world models from large‑scale Internet data.</p>
-          </div>
-          <div class="speaker-card">
-            <div class="speaker-photo placeholder"></div>
+            <div class="speaker-photo">
+              <img src="static/presenters/brewster.jpg" alt="Stephen Brewster">
+            </div>
             <h3>Stephen Brewster</h3>
             <p class="affiliation">University of Glasgow</p>
-            <p>Professor of HCI, leads Multimodal Interaction Group. Expert in multimodal interaction for XR and mobile devices.</p>
+            <p>Stephen Brewster is a Professor of Human-Computer Interaction in the School of Computing Science at the University of Glasgow, where he leads the Multimodal Interaction Group within the GIST research section. His research focuses on multimodal HCI, combining audio, haptics, and gesture to create rich, natural human-computer interactions, with a strong emphasis on applying perceptual research to practical settings. He is a Fellow of the Royal Society of Edinburgh, a member of the ACM SIGCHI Academy, and an ACM Distinguished Speaker.</p>
+            <div class="org-social">
+              <a href="https://scholar.google.co.uk/citations?hl=en&user=uu7LudIAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <a href="https://www.gla.ac.uk/schools/computing/staff/stephenbrewster/" target="_blank" rel="noopener" aria-label="Personal Website"><i class="fas fa-globe"></i></a>
+            </div>
           </div>
           <div class="speaker-card">
-            <div class="speaker-photo placeholder"></div>
+            <div class="speaker-photo">
+              <img src="static/presenters/cavallaro.jpg" alt="Andrea Cavallaro">
+            </div>
             <h3>Andrea Cavallaro</h3>
             <p class="affiliation">EPFL & Queen Mary University of London</p>
-            <p>Full Professor, Turing Fellow. Research on privacy‑aware visual analysis and multi‑sensor scene understanding.</p>
+            <p>Andrea Cavallaro is a Full Professor at EPFL and Queen Mary University of London, where he founded the Centre for Intelligent Sensing, and a Turing Fellow at The Alan Turing Institute. He received his Ph.D. in Electrical Engineering from EPFL in 2002 and is a Fellow of IAPR for contributions to image processing and multi-sensor scene understanding. He serves as Editor-in-Chief of Signal Processing: Image Communication and Senior Area Editor for IEEE Transactions on Image Processing. His research spans privacy-aware visual analysis, person re-identification, and sensor data anonymization, and he has edited books on multi-camera networks and multimedia surveillance.</p>
+            <div class="org-social">
+  <a href="https://scholar.google.com/citations?user=KZmcljoAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <a href="https://people.epfl.ch/andrea.cavallaro/?lang=en" target="_blank" rel="noopener" aria-label="Personal Website"><i class="fas fa-globe"></i></a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Schedule -->
-    <section id="schedule" class="section">
+    <section id="schedule" class="section alt-bg">
       <div class="container">
         <h2>Tentative Schedule</h2>
         <p class="schedule-note">Half‑day workshop (4 hours) – subject to minor adjustments</p>
-        <table class="schedule-table">
-          <tr><td>10 min</td><td>Opening remarks</td></tr>
-          <tr><td>30 min</td><td>Invited Talk 1 – Katerina Fragkiadaki</td></tr>
-          <tr><td>30 min</td><td>Invited Talk 2 – Jack Parker‑Holder</td></tr>
-          <tr><td>10 min</td><td>Short break</td></tr>
-          <tr><td>30 min</td><td>Invited Talk 3 – Stephen Brewster</td></tr>
-          <tr><td>30 min</td><td>Invited Talk 4 – Andrea Cavallaro</td></tr>
-          <tr><td>10 min</td><td>Short break</td></tr>
-          <tr><td>30 min</td><td>Panel session with all speakers</td></tr>
-          <tr><td>60 min</td><td>Poster session + short oral presentations (2–3)</td></tr>
+        <table class="date-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Event</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>08:50–09:00</td><td>Opening remarks</td></tr>
+            <tr><td>09:00–09:30</td><td>Invited Talk 1</td></tr>
+            <tr><td>09:30–10:00</td><td>Invited Talk 2</td></tr>
+            <tr class="break-row"><td>10:00–11:00</td><td>☕ Coffee break and poster session for accepted contributions</td></tr>
+            <tr><td>11:00–11:30</td><td>Invited Talk 3</td></tr>
+            <tr><td>11:30–12:20</td><td>Panel discussion, Q&amp;A</td></tr>
+            <tr><td>12:20–12:30</td><td>Closing remarks</td></tr>
+          </tbody>
         </table>
         <p class="mt-2">We will also host an <strong>Embodied Reasoning Challenge</strong> based on the UNOBench benchmark for robotic grasping in cluttered scenes.</p>
       </div>
     </section>
 
-    <!-- Organizers (now with circular placeholders and individual cards) -->
+    <!-- Organizers -->
     <section id="organizers" class="section alt-bg">
       <div class="container">
         <h2>Workshop Organizers</h2>
         <div class="organizers-grid">
-          <!-- Ericsson team -->
+          
+          <!-- Püren Güler -->
           <div class="organizer-card">
-            <div class="org-photo placeholder"></div>
+            <div class="org-photo">
+              <img src="static/organization/puren.jpeg" alt="Püren Güler">
+            </div>
             <h3>Püren Güler</h3>
-            <p class="org-affiliation">Ericsson AB, Lund, Sweden</p>
-            <p class="org-email">puren.guler@ericsson.com</p>
+            <p class="org-affiliation">Ericsson Research</p>
+            <div class="org-social">
+              <a href="https://scholar.google.com/citations?user=Oqn6cosAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <a href="https://www.linkedin.com/in/p%C3%BCren-g%C3%BCler-76457317/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <!--<a href="#" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Personal Website"><i class="fas fa-globe"></i></a>-->
+            </div>
           </div>
+          
+          <!-- Hirokatsu Kataoka -->
           <div class="organizer-card">
-            <div class="org-photo placeholder"></div>
-            <h3>Hector Caltenco</h3>
-            <p class="org-affiliation">Ericsson AB, Lund, Sweden</p>
-            <p class="org-email">hector.caltenco@ericsson.com</p>
-          </div>
-          <div class="organizer-card">
-            <div class="org-photo placeholder"></div>
-            <h3>Hiba Alqaysi</h3>
-            <p class="org-affiliation">Ericsson AB, Lund, Sweden</p>
-            <p class="org-email">hiba.alqaysi@ericsson.com</p>
-          </div>
-          <div class="organizer-card">
-            <div class="org-photo placeholder"></div>
-            <h3>Anastasia Grebenyuk</h3>
-            <p class="org-affiliation">Ericsson AB, Lund, Sweden</p>
-            <p class="org-email">anastasia.grebenyuk@ericsson.com</p>
-          </div>
-          <div class="organizer-card">
-            <div class="org-photo placeholder"></div>
-            <h3>Marcus Valtonen Örnhag</h3>
-            <p class="org-affiliation">Ericsson AB, Lund, Sweden</p>
-            <p class="org-email">marcus.valtonen.ornhag@ericsson.com</p>
-          </div>
-          <!-- AIST team -->
-          <div class="organizer-card">
-            <div class="org-photo placeholder"></div>
+            <div class="org-photo">
+              <img src="static/organization/hirokatsu.png" alt="Hirokatsu Kataoka">
+            </div>
             <h3>Hirokatsu Kataoka</h3>
-            <p class="org-affiliation">AIST, Tsukuba, Japan</p>
-            <p class="org-email">hirokatsu.kataoka@aist.go.jp</p>
+            <p class="org-affiliation">AIST</p>
+            <div class="org-social">
+              <a href="https://scholar.google.com/citations?user=f1CePVQAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <a href="https://x.com/hirokatukataoka" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+              <!--<a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>-->
+              <a href="https://hirokatsukataoka.net/" target="_blank" rel="noopener" aria-label="Personal Website"><i class="fas fa-globe"></i></a>
+            </div>
           </div>
+          
+          <!-- Yoshihiro Fukuhara -->
           <div class="organizer-card">
-            <div class="org-photo placeholder"></div>
+            <div class="org-photo">
+              <img src="static/organization/yoshi.png" alt="Yoshihiro Fukuhara">
+            </div>
             <h3>Yoshihiro Fukuhara</h3>
-            <p class="org-affiliation">AIST, Tsukuba, Japan</p>
-            <p class="org-email">gatheluck@gmail.com</p>
+            <p class="org-affiliation">AIST/CADDi</p>
+            <div class="org-social">
+              <a href="https://scholar.google.com/citations?user=NHmnq1MAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <!--<a href="#" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>-->
+              <a href="https://github.com/gatheluck" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://gatheluck.net/" target="_blank" rel="noopener" aria-label="Personal Website"><i class="fas fa-globe"></i></a>
+            </div>
           </div>
-          <!-- FBK -->
+                  
+          <!-- Fabio Poiesi -->
           <div class="organizer-card">
-            <div class="org-photo placeholder"></div>
+            <div class="org-photo">
+              <img src="static/organization/fabio.png" alt="Fabio Poiesi">
+            </div>
             <h3>Fabio Poiesi</h3>
-            <p class="org-affiliation">FBK, Trento, Italy</p>
-            <p class="org-email">poiesi@fbk.eu</p>
+            <p class="org-affiliation">FBK, Trento</p>
+            <div class="org-social">
+              <a href="https://scholar.google.com/citations?user=BQ7li6AAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <a href="https://x.com/Poiex" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://github.com/fabiopoiesi" target="_blank"  rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://fabiopoiesi.github.io/" target="_blank"  rel="noopener" aria-label="Personal Website"><i class="fas fa-globe"></i></a>
+            </div>
           </div>
-          <!-- Lund University -->
+
+          <!-- Hiba Alqaysi -->
           <div class="organizer-card">
-            <div class="org-photo placeholder"></div>
+            <div class="org-photo">
+              <img src="static/organization/hiba.jpeg" alt="Hiba Alqaysi">
+            </div>
+            <h3>Hiba Alqaysi</h3>
+            <p class="org-affiliation">Ericsson Research</p>
+            <div class="org-social">
+              <a href="https://scholar.google.com/citations?user=n2pRrmEAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <a href="https://www.linkedin.com/in/hiba-alqaysi-914a9539/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <!--<a href="#" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Personal Website"><i class="fas fa-globe"></i></a>-->
+            </div>
+          </div>
+          
+          <!-- Anastasia Grebenyuk -->
+          <div class="organizer-card">
+            <div class="org-photo">
+              <img src="static/organization/anastasia.png" alt="Anastasia Grebenyuk">
+            </div>
+            <h3>Anastasia Grebenyuk</h3>
+            <p class="org-affiliation">Ericsson Research</p>
+            <div class="org-social">
+              <a href="https://www.linkedin.com/in/anastasia-grebenyuk-39b206a5/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <!--<a href="#" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Personal Website"><i class="fas fa-globe"></i></a>-->
+            </div>
+          </div>
+          
+          <!-- Haoyu Xiong -->
+          <div class="organizer-card">
+            <div class="org-photo">
+              <img src="static/organization/haoyu.jpeg" alt="Haoyu Xiong">
+            </div>
+            <h3>Haoyu Xiong</h3>
+            <p class="org-affiliation">MIT</p>
+            <div class="org-social">
+              <a href="https://scholar.google.com/citations?user=iGfCCEYAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <a href="https://x.com/Haoyu_Xiong_" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://github.com/haoyu-x" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://haoyu-x.github.io/" target="_blank" rel="noopener" aria-label="Personal Website"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+          
+          <!-- Marcus Valtonen Örnhag -->
+          <div class="organizer-card">
+            <div class="org-photo">
+              <img src="static/organization/marcus.jpeg" alt="Marcus Valtonen Örnhag">
+            </div>
+            <h3>Marcus Valtonen Örnhag</h3>
+            <p class="org-affiliation">Ericsson Research</p>
+            <div class="org-social">
+              <a href="https://scholar.google.com/citations?user=U_U-GmcAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <a href="https://github.com/marcusvaltonen" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          
+          <!-- Magnus Oskarsson -->
+          <div class="organizer-card">
+            <div class="org-photo">
+              <img src="static/organization/magnus.jpeg" alt="Magnus Oskarsson">
+            </div>
             <h3>Magnus Oskarsson</h3>
-            <p class="org-affiliation">Lund University, Sweden</p>
-            <p class="org-email">magnus.oskarsson@math.lth.se</p>
+            <p class="org-affiliation">Lund University</p>
+            <div class="org-social">
+              <a href="https://scholar.google.com/citations?user=zErxvQoAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <!--<a href="#" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>-->
+              <a href="https://portal.research.lu.se/sv/persons/magnus-oskarsson" target="_blank" rel="noopener" aria-label="Personal Website"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+         
+                   
+          <!-- Hector Caltenco -->
+          <div class="organizer-card">
+            <div class="org-photo">
+              <img src="static/organization/hector.jpeg" alt="Hector Caltenco">
+            </div>
+            <h3>Héctor Caltenco</h3>
+            <p class="org-affiliation">Ericsson Research</p>
+            <div class="org-social">
+              <a href="https://scholar.google.com/citations?user=sEETtQoAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <!--<a href="#" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Personal Website"><i class="fas fa-globe"></i></a>-->
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Call for Papers / Participation -->
-    <section id="cfp" class="section">
+    
+    <!-- Call for Papers -->
+    <section id="call" class="section">
       <div class="container">
-        <h2>Call for Contributions</h2>
-        <p>We invite submissions of extended abstracts (up to 4 pages, excluding references) describing novel research, position papers, or challenge results related to on‑device embodied world models. Topics include (but are not limited to):</p>
+        <h2>Call for Papers</h2>
+        <p>We welcome submissions on all topics related to the embodied world models on device. The submission portal will open on OpenReview when reviewing begins. The exact submission format and paper page limits will follow the final ECCV 2026 official template and main conference guidelines [https://eccv.ecva.net/Conferences/2026/SubmissionPolicies]. Each submission will be reviewed under a double-blind policy.</p>
+        <p>We offer <b>two submission tracks<b>: Archival and Non-Archival. Archival track follows the standard ECCV paper format with a 14-page limit, are submitted via OpenReview, and will be published in the workshop proceedings. Non-Archival submissions are extended abstracts with a 4-page limit; they will not appear in the proceedings but will be featured on the workshop website. We welcome submissions of previously published work on topics relevant to the workshop as extended abstracts.</p>
+        <h3>Topics include (but are not limited to):</h3>
         <ul>
-          <li>Efficient multimodal world models</li>
-          <li>Spatial understanding for XR and robotics</li>
-          <li>Privacy‑preserving perception on mobile devices</li>
-          <li>Embodied reasoning benchmarks</li>
-          <li>Deployment of foundation models at the edge</li>
+          <li>Embodied world models</li>
+          <li>Multi-modal reasoning</li>
+          <li>Spatial understanding for XR, robotics, autonomous driving, etc.</li>
+          <li>Deployment of AI models and spatial compute at the edge</li>
+          <li>Privacy preserving perception on devices</li>
         </ul>
-        <p><strong>Submission deadline:</strong> TBA (approx. 2 weeks before ECCV early registration deadline)</p>
-        <p><strong>Proceedings:</strong> Accepted abstracts will be posted on the workshop website (non‑archival).</p>
+      </div>
+    </section>
+    
+    <!-- Important Dates -->
+    <section id="call" class="section">
+      <div class="container">
+        <h2>Important Dates</h2>
+        <p class="schedule-note">Tentative dates</p>
+        <table class="important-dates-table">
+          <thead>
+            <tr>
+              <th>Milestone</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Workshop dates</td><td>September 8–9, 2026 (exact date, time, and place TBD)</td></tr>
+            <tr><td>Submission opens</td><td>TBD</td></tr>
+            <tr><td>Paper submission deadline</td><td>July 9</td></tr>
+            <tr><td>Paper acceptance notification</td><td>August 7</td></tr>
+            <tr><td>Camera-ready version</td><td>August 14</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -194,13 +328,41 @@
         <p>Our workshop emphasizes diversity across the organizing team and invited speakers. The team includes members of diverse gender representation and international backgrounds from Europe, the Middle East, and Asia. Organizers span multiple career stages and affiliations (industrial research, universities, national labs). Speaker institutions are globally recognized, and their expertise covers interdisciplinary areas—world‑model scaling, multimodal interaction, responsible AI—directly aligned with our workshop's key questions.</p>
       </div>
     </section>
+
+    <!-- Sponsors -->
+    <section id="sponsors" class="section">
+      <div class="container">
+        <h2>Sponsor</h2>
+        <div class="sponsor-wrapper">
+          <img src="static/ERI_horizontal_RGB.svg" alt="Ericsson Research" class="sponsor-logo">
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="container">
       <p>On‑device Embodied World Models (ODEWM) Workshop @ ECCV 2026</p>
-      <p>Contact: puren.guler@ericsson.com</p>
+      <p>Contact: odewm.ws@gmail.com</p>
     </div>
   </footer>
+
+  <script>
+    (function() {
+      const toggleBtn = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+      if (toggleBtn && navMenu) {
+        toggleBtn.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+        });
+        // Optional: close menu when a link is clicked (good for mobile)
+        navMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+          });
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
